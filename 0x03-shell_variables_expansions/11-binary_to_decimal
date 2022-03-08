@@ -1,2 +1,2 @@
 #!/bin/bash
-binary value = Convert.ToInt32("1101", 2)
+binary = echo "$((2#101010101))"
