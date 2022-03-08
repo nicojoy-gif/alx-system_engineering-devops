@@ -1,2 +1,2 @@
 #!/bin/bash
-DIRS=$(find . -type d)
+echo $((`echo $PATH | grep -o ":/" | wc -|` + 1))
