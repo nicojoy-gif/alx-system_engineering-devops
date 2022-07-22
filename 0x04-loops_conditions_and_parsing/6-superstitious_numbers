@@ -5,20 +5,29 @@
 #+ "bad luck from Italy" after the 17th loop iteration
 
 COUNTER=1
-while [ "$COUNTER" -le 20 ];
+while [ $COUNTER -lt 21 ]
 do
-    echo "$COUNTER"
-    case "$COUNTER" in
-	4)
+    case $COUNTER in
+
+        4)
+	    echo $COUNTER
 	    echo "bad luck from China"
 	    ;;
+	
 	9)
+	    echo $COUNTER
 	    echo "bad luck from Japan"
 	    ;;
+	
 	17)
+	    echo $COUNTER
 	    echo "bad luck from Italy"
 	    ;;
-    esac
-    (( COUNTER )) =COUNTER+1
-done
 
+	*)
+	    echo $COUNTER
+	    ;;
+    esac
+
+        ((COUNTER+=1))
+done
